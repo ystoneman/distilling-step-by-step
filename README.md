@@ -1,4 +1,6 @@
-# Distilling Step-by-Step!
+# Distilling Step-by-Step, Adapted to Run on Amazon SageMaker Studio
+
+🚧 Work in Progress: Working on getting it to run on SageMaker Studio 🚧
 
 Code for paper [Distilling Step-by-Step! Outperforming Larger Language Models with Less Training Data and Smaller Model Sizes](https://arxiv.org/abs/2305.02301)
 
@@ -70,3 +72,8 @@ If you find this repository useful, please consider citing:
   year={2023}
 }
 ```
+
+## Development Process for SageMaker Adaptation
+- Tried using a built-in SageMaker image, but there was not one with the exact combination of torch and python versions specified by the authors of this research. That was probably why I got errors related to versions of packages.
+- Created Dockerfile and requirements.txt based on this Readme and the imports from the Python scripts. Where a version was pinned by the original authors (like for `datasets`), I searched GitHub for common versions used for that package when used in combination with one of the packages that did have a version pinned (`like torchvision==0.13.1`).
+- Created Custom SageMaker image from that Dockerfile.
