@@ -74,6 +74,4 @@ If you find this repository useful, please consider citing:
 ```
 
 ## Development Process for SageMaker Adaptation
-- Tried using a built-in SageMaker image, but there was not one with the exact combination of torch and python versions specified by the authors of this research. That was probably why I got errors related to versions of packages.
-- Created Dockerfile and requirements.txt based on this Readme and the imports from the Python scripts. Where a version was pinned by the original authors (like for `datasets`), I searched GitHub for common versions used for that package when used in combination with one of the packages that did have a version pinned (`like torchvision==0.13.1`).
-- Created Custom SageMaker image from that Dockerfile.
+- Using the latest SageMaker Distribution for SageMaker Studio Notebooks (not Classic).
