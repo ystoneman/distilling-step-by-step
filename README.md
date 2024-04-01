@@ -75,3 +75,4 @@ If you find this repository useful, please consider citing:
 
 ## Development Process for SageMaker Adaptation
 - Using the latest SageMaker Distribution for SageMaker Studio Notebooks (not Classic).
+- If running this directly on your notebook kernel, make sure to `conda init` before running the other `conda` commands.
